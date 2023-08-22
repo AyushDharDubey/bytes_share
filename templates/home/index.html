@@ -1,0 +1,21 @@
+{% extends 'auth/base.html' %}
+
+{% block head %}{% endblock %}
+
+{% block title %} Home - smnation {% endblock %}
+
+{% block body %}
+
+<h3>Latest in the repository</h3>
+
+<!-- New Posts -->
+{% for file in files %}
+    <a href="{{file.url}}"><div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+        <p class="card-text">{{file.title}}</p>
+        </div>
+    </div></a>
+{% endfor %}
+
+{% endblock %}

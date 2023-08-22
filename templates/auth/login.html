@@ -1,0 +1,11 @@
+{% extends 'auth/base.html' %}
+
+{% block title %} Home - Blogger {% endblock %}
+
+{% block body %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Log In">
+    </form>
+{% endblock %}
